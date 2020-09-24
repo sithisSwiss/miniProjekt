@@ -8,5 +8,4 @@ Das Ziel ist es folgende Feature zu erstellen:
 - Einen Einheitenrechner
 - Einen generator von Zufallszahlen, welcher auf die Sensoren zrückgreift um eine möglichst echte Zufallszahl zu generieren
 
-Unter folgendem Link befindet sich die Ideenzeichnung der App: [Intro.pdf](https://github.com/sithisSwiss/miniProjekt/blob/master/drawing/miniProject.pdf).
-https://github.com/sithisSwiss/miniProjekt/blob/master/drawing/miniProject.pdf
+Unter folgendem Link befindet sich die Ideenzeichnung der App: [Ideenzeichnung.pdf](https://github.com/sithisSwiss/miniProjekt/blob/master/drawing/miniProject.pdf)
