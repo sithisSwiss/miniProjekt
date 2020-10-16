@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.miniprojekt">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,9 +13,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".CalculatorActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".CalculatorHistoryActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UnitConverterActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".RandomGeneratorActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".CurrencyConverterActivity"
+            tools:ignore="Instantiatable" />
+        <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

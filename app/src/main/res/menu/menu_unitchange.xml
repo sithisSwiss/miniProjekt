@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=
+        ".MenuExampleActivity" >
+    <item
+        android:id="@+id/menu_imperalMetric"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="@string/imperial_metric"/>
+    <item
+        android:id="@+id/menu_temp"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="@string/temperature"/>
+</menu>

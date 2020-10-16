@@ -1,12 +1,19 @@
 <resources>
-    <string name="app_name">miniProjekt</string>
+    <string name="app_name">miniProject</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="btn_calc">Calculator</string>
+    <string name="btn_currency">Currency Converter</string>
+    <string name="btn_unit">Unit Converter</string>
+    <string name="btn_random">Random Generator</string>
+    <string name="imperial_metric"><![CDATA[Imperial <-> Metric]]></string>
+    <string name="temperature">Temperature</string>
+    <string name="enterUnit">Enter</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="magneticField">Magnetic field</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="generate">Generate</string>
+    <string name="calculateCurrency">Calculate</string>
+    <string name="systemTime">System time</string>
+    <string name="clearHistory">Clear history</string>
+    <string name="light">Light</string>
 </resources>

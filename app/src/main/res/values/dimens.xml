@@ -1,3 +1,10 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="btn_height">64dp</dimen>
+    <dimen name="btn_calcHeight">72dp</dimen>
+    <dimen name="btn_calcDoubleWidth">156dp</dimen>
+    <dimen name="btn_calcWidth">@dimen/btn_calcHeight</dimen>
+    <dimen name="btn_calcGap">12dp</dimen>
+    <dimen name="gapToEdge">32dp</dimen>
+    <dimen name="sensorHeight">40dp</dimen>
 </resources>
