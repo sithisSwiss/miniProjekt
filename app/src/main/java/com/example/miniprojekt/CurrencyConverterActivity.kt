@@ -13,11 +13,10 @@ import kotlin.math.round
 
 class CurrencyConverterActivity : AppCompatActivity(){
     private val currencyConverter : CurrencyConverterController = CurrencyConverterController()
-    enum class Currency {
-        CHF, EUR, USD
-    }
-    private var positionSpinnerFrom: Currency = Currency.CHF
-    private var positionSpinnerTo: Currency = Currency.CHF
+    private var x : Int = 0
+    private val positionsMap = currencyConverter.getListOfCurrency().associateBy(keySelector = {x++;}, valueTransform = { i-> i})
+    private var positionSpinnerFrom : String = positionsMap[0] ?: error("position is NULL")
+    private var positionSpinnerTo : String = positionsMap[0] ?: error("position is NULL")
 
     private lateinit var exchangeFrom:TextView
     private lateinit var exchangeTo:TextView
@@ -37,10 +36,9 @@ class CurrencyConverterActivity : AppCompatActivity(){
         val outputField = findViewById<TextView>(R.id.exchangeCalcOut)
         val calcBtn = findViewById<Button>(R.id.btnCalc)
 
-        val categories: ArrayList<String> = ArrayList()
-        categories.add("CHF")
-        categories.add("EUR")
-        categories.add("USD")
+        val categories: ArrayList<String> = currencyConverter.getListOfCurrency()
+
+
         val dataAdapter = ArrayAdapter(this, R.layout.customspinner, categories)
         spinnerFrom.adapter = dataAdapter;
         spinnerTo.adapter = dataAdapter;
@@ -68,44 +66,21 @@ class CurrencyConverterActivity : AppCompatActivity(){
                     e1.printStackTrace()
                 }
             }
-            val result : Double = (round(inputDouble*getRate(positionSpinnerTo, positionSpinnerFrom) * 10000) / 10000)
+            val result : Double = (round(inputDouble* currencyConverter.getRate(positionSpinnerTo, positionSpinnerFrom)!! * 10000) / 10000)
             outputField.text = (result).toString()
         }
 
     }
-    fun setPosition(pos:Int):Currency{
-        return when(pos){
-            0->Currency.CHF
-            1->Currency.EUR
-            2->Currency.USD
-            else -> Currency.CHF
-        }
+    fun setPosition(pos:Int):String{
+        return positionsMap[pos] ?: error("position is NULL")
     }
     @SuppressLint("SetTextI18n")
     private fun changeRateDisplay(){
 
-        exchangeFrom.text = "1 ${positionSpinnerTo.name} = ${getRate(positionSpinnerTo, positionSpinnerFrom)} ${positionSpinnerFrom.name}"
-        exchangeTo.text = "1 ${positionSpinnerFrom.name} = ${getRate(positionSpinnerFrom, positionSpinnerTo)} ${positionSpinnerTo.name}"
+        exchangeFrom.text = "1 $positionSpinnerTo = ${currencyConverter.getRate(positionSpinnerTo, positionSpinnerFrom)} $positionSpinnerFrom"
+        exchangeTo.text = "1 $positionSpinnerFrom = ${currencyConverter.getRate(positionSpinnerFrom, positionSpinnerTo)} $positionSpinnerTo"
 
     }
-    private fun getRate(from:Currency, to:Currency) : Double{
-        if(from == to){
-            return 1.0
-        }else if(from == Currency.CHF && to == Currency.EUR){
-            return currencyConverter.exchangeRate.CHF_EUR
-        }else if(from == Currency.CHF && to == Currency.USD){
-            return currencyConverter.exchangeRate.CHF_USD
-        }else if(from == Currency.EUR && to == Currency.CHF){
-            return currencyConverter.exchangeRate.EUR_CHF
-        }else if(from == Currency.EUR && to == Currency.USD){
-            return currencyConverter.exchangeRate.EUR_USD
-        }else if(from == Currency.USD && to == Currency.CHF){
-            return currencyConverter.exchangeRate.USD_CHF
-        }else if(from == Currency.USD && to == Currency.EUR){
-            return currencyConverter.exchangeRate.USD_EUR
-        }else{
-            return 1.0
-        }
-    }
+
 
 }

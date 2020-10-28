@@ -14,21 +14,27 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".CalculatorActivity"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".CalculatorHistoryActivity"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".UnitConverterActivity"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".RandomGeneratorActivity"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".CurrencyConverterActivity"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
