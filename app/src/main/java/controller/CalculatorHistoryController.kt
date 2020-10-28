@@ -10,9 +10,7 @@ import java.time.LocalDateTime
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken
 import java.io.*
-import java.lang.reflect.Type
 import java.time.format.DateTimeFormatter
-import java.security.AccessControlContext
 
 
 class CalculatorHistoryController(private val context: Context) {
@@ -35,7 +33,7 @@ class CalculatorHistoryController(private val context: Context) {
         loadList()
         historyList.add(historyEntry)
 
-        //var type : Type = TypeToken<Collection<HistoryEntry>>(){}.getType()
+
         val jsonString: String = Gson().toJson(historyList)
         Log.d("customADD", jsonString)
         val outputStream : FileOutputStream = FileOutputStream(file)

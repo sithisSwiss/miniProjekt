@@ -9,9 +9,6 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import data.HistoryEntry
-import java.io.File
-import java.time.format.DateTimeFormatter
-
 
 
 class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -20,10 +17,6 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val entryView = itemView.findViewById(R.id.entry) as TextView
         val dateView = itemView.findViewById(R.id.timeStamp) as TextView
         entryView.text = historyEntry.entry
-        /*val timeStamp = historyEntry.timeStamp
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy / HH:mm:ss")
-        val formatted = timeStamp.format(formatter)
-        dateView.text = formatted.toString()*/
         dateView.text = historyEntry.timeStamp
     }
 }

@@ -17,12 +17,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CalculatorActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CalculatorActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CalculatorHistoryActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CalculatorHistoryActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CurrencyConverterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/CurrencyConverterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/HistoryAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/HistoryAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/RandomGeneratorActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/miniprojekt/RandomGeneratorActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/controller/CalculatorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/controller/CalculatorController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/controller/CalculatorHistoryController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/controller/CalculatorHistoryController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/controller/CurrencyConverterController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/controller/CurrencyConverterController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/controller/RandomGeneratorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/controller/RandomGeneratorController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/controller/UnitController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/controller/UnitController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/data/HistoryEntry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/data/HistoryEntry.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,28 +218,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600925957209" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603725207903">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603894675421">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603710197756" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603894675421" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603725207903" />
     <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602236737242" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603725207903">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603894675421">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603710197756" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603894675421" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603725207903" />
     <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602236737241" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603725207902">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603894675421">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603710197755" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603894675421" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603725207902" />
     <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602236737241" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603725207903">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603894675421">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603710197756" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603894675421" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603725207903" />
     <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602236737242" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1602319807104">

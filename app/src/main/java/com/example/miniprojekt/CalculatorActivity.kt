@@ -1,7 +1,7 @@
 package com.example.miniprojekt
 
 
-import android.content.Context
+
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import controller.CalculatorController
 import controller.CalculatorHistoryController
 import controller.Operation
-import java.io.File
+
 
 
 class CalculatorActivity : AppCompatActivity(), View.OnClickListener{

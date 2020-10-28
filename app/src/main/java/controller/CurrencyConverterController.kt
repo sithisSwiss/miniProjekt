@@ -1,21 +1,18 @@
 package controller
 
-import android.util.Log
-import android.widget.TextView
-import com.example.miniprojekt.CurrencyConverterActivity
+
 import java.net.URL
-import org.json.JSONException
 import org.json.JSONObject
 
 class CurrencyConverterController() {
 
     class ExchangeRate {
-        var mapAUD = hashMapOf("AUD" to 1.0, "CAD" to 0.0, "CHF" to 0.0, "EUR" to 0.0, "GBP" to 0.0,  "USD" to 0.0)
-        var mapCAD = hashMapOf("AUD" to 0.0, "CAD" to 1.0, "CHF" to 0.0, "EUR" to 0.0, "GBP" to 0.0,  "USD" to 0.0)
-        var mapCHF = hashMapOf("AUD" to 0.0, "CAD" to 0.0, "CHF" to 1.0, "EUR" to 0.0, "GBP" to 0.0,  "USD" to 0.0)
-        var mapEUR = hashMapOf("AUD" to 0.0, "CAD" to 0.0, "CHF" to 0.0, "EUR" to 1.0, "GBP" to 0.0,  "USD" to 0.0)
-        var mapGBP = hashMapOf("AUD" to 0.0, "CAD" to 0.0, "CHF" to 0.0, "EUR" to 0.0, "GBP" to 1.0,  "USD" to 0.0)
-        var mapUSD = hashMapOf("AUD" to 0.0, "CAD" to 0.0, "CHF" to 0.0, "EUR" to 0.0, "GBP" to 0.0,  "USD" to 1.0)
+        var mapAUD = hashMapOf("AUD" to 1.00, "CAD" to 0.94, "CHF" to 0.64, "EUR" to 0.60, "GBP" to 0.55,  "USD" to 0.71)
+        var mapCAD = hashMapOf("AUD" to 1.06, "CAD" to 1.00, "CHF" to 0.69, "EUR" to 0.64, "GBP" to 0.58,  "USD" to 0.76)
+        var mapCHF = hashMapOf("AUD" to 1.55, "CAD" to 1.45, "CHF" to 1.00, "EUR" to 0.93, "GBP" to 0.84,  "USD" to 1.10)
+        var mapEUR = hashMapOf("AUD" to 1.66, "CAD" to 1.56, "CHF" to 1.07, "EUR" to 1.00, "GBP" to 0.91,  "USD" to 1.18)
+        var mapGBP = hashMapOf("AUD" to 1.83, "CAD" to 1.72, "CHF" to 1.18, "EUR" to 1.10, "GBP" to 1.00,  "USD" to 1.30)
+        var mapUSD = hashMapOf("AUD" to 1.40, "CAD" to 1.32, "CHF" to 0.91, "EUR" to 0.85, "GBP" to 0.77,  "USD" to 1.00)
         var mainMap = hashMapOf("AUD" to mapAUD, "CAD" to mapCAD, "CHF" to mapCHF, "EUR" to mapEUR, "GBP" to mapGBP, "USD" to mapUSD)
     }
     private val exchangeRate : ExchangeRate = ExchangeRate()
@@ -29,30 +26,26 @@ class CurrencyConverterController() {
 
     class GetCourseWithThread(private var exchangeRate : ExchangeRate) : Runnable{
         override fun run() {
-            exchangeRate.mainMap.forEach{ (key, value) ->
-                val courseObj = JSONObject(URL("https://api.exchangeratesapi.io/latest?base=$key").readText()).getJSONObject("rates");
-                for(k in value.keys)
-                    if(key != k)
-                        value[k] = courseObj.getDouble(k)
+            val tempMap  = HashMap<String, HashMap<String, Double>>() //Benötigt falls Teil der Abfrage Fehlschlägt, wird die komplette DefaultMap verwendet
+            exchangeRate.mainMap.forEach{(key, maps) ->
+                val temp = HashMap<String, Double>()
+                maps.forEach { (k, d) ->
+                    temp[k] = d
+                }
+                tempMap[key] = temp
             }
+
+            try{
+                tempMap.forEach{ (key, value) ->
+                    val courseObj = JSONObject(URL("https://api.exchangeratesapi.io/latest?base=$key").readText()).getJSONObject("rates")
+                    for(k in value.keys)
+                        if(key != k)
+                            value[k] = courseObj.getDouble(k)
+                }
+                exchangeRate.mainMap = HashMap(tempMap)
+            }catch (ex : Exception) { "null" }
         }
     }
-    /*class GetCourseWithThread(private val exchangeRate: ExchangeRate) : Runnable{
-        override fun run() {
-            var courseObj = JSONObject(URL("https://free.currconv.com/api/v7/convert?apiKey=a564c04c3775a96ec107&compact=ultra&q=EUR_CHF,CHF_EUR").readText())
-            exchangeRate.EUR_CHF = courseObj.getDouble("EUR_CHF")
-            exchangeRate.CHF_EUR = courseObj.getDouble("CHF_EUR")
-            courseObj = JSONObject(URL("https://free.currconv.com/api/v7/convert?apiKey=a564c04c3775a96ec107&compact=ultra&q=EUR_USD,USD_EUR").readText())
-            exchangeRate.EUR_USD = courseObj.getDouble("EUR_USD")
-            exchangeRate.USD_EUR = courseObj.getDouble("USD_EUR")
-            courseObj = JSONObject(URL("https://free.currconv.com/api/v7/convert?apiKey=a564c04c3775a96ec107&compact=ultra&q=CHF_USD,USD_CHF").readText())
-            exchangeRate.CHF_USD = courseObj.getDouble("CHF_USD")
-            exchangeRate.USD_CHF = courseObj.getDouble("USD_CHF")
-
-
-
-        }
-    }*/
     private fun getAllCourse() {
         val thready = GetCourseWithThread(exchangeRate)
         Thread(thready).start()

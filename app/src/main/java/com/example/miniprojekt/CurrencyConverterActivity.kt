@@ -1,10 +1,7 @@
 package com.example.miniprojekt
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.net.ConnectivityManager
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -74,9 +71,9 @@ class CurrencyConverterActivity : AppCompatActivity(){
     fun setPosition(pos:Int):String{
         return positionsMap[pos] ?: error("position is NULL")
     }
+
     @SuppressLint("SetTextI18n")
     private fun changeRateDisplay(){
-
         exchangeFrom.text = "1 $positionSpinnerTo = ${currencyConverter.getRate(positionSpinnerTo, positionSpinnerFrom)} $positionSpinnerFrom"
         exchangeTo.text = "1 $positionSpinnerFrom = ${currencyConverter.getRate(positionSpinnerFrom, positionSpinnerTo)} $positionSpinnerTo"
 

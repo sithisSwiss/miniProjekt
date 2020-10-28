@@ -21,14 +21,7 @@ class UnitController {
     }
     private fun calcDistance(input : Double) : Double{
 
-        /*spinnerArray.add("Kilometer")
-        spinnerArray.add("Meter")
-        spinnerArray.add("Centimeter")
-        spinnerArray.add("Millimeter")
-        spinnerArray.add("inch")
-        spinnerArray.add("foot")
-        spinnerArray.add("yard")
-        spinnerArray.add("mile")*/
+
         // make Meter
         if(spinnerFromState == spinnerToState)
             return input

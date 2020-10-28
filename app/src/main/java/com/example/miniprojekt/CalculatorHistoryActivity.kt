@@ -1,6 +1,6 @@
 package com.example.miniprojekt
 
-import android.content.Context
+
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import controller.CalculatorHistoryController
 import data.HistoryEntry
-import kotlinx.android.synthetic.main.activity_calculatorhistory.view.*
-import java.io.File
 
 class CalculatorHistoryActivity : AppCompatActivity(){
     private lateinit var calculatorHistoryController : CalculatorHistoryController

@@ -1,16 +1,11 @@
 package com.example.miniprojekt
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.hardware.*
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import controller.RandomGeneratorController
-import controller.UnitController
-import kotlin.math.round
 
 class RandomGeneratorActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
